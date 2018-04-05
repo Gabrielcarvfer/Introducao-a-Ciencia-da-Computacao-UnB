@@ -855,7 +855,7 @@ class FunTurtle (turtle.Turtle):
     def draw(self, character):
         self.left(90)
         self.forward(segmentSize)
-        self.color("blue")
+        self.color("green")
         self.pensize(3)
 
         self.drawSymbols[character](self)
