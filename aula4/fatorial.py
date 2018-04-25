@@ -1,10 +1,13 @@
+#No fatorial iterativo, multiplicamos todos os números de 1 até n em um laço
 def fatorial_iterativo(n):
     fatorial = 1
     for i in range(1,n+1):
         fatorial *= i
     return fatorial
 
-
+#No fatorial_recursivo(n), chamamos a função que multiplica n e o resultado de fatorial_recursivo(n-1)
+#No fatorial_recursivo(n-1), chamamos a função que multiplica n-1 e o resultado de fatorial_recursivo(n-2)
+#E assim até a condição de parada ser alcançada, com n <= 1
 def fatorial_recursivo(n):
     if n <= 1:
         return 1
