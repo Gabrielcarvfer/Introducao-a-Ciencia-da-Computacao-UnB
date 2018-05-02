@@ -287,6 +287,7 @@ def main():
     pygame.quit()
 
     # Finaliza a execução
-    sys.exit()
+    #sys.exit()
+    return
 
-main()
+#main()

@@ -1,11 +1,15 @@
+from turtleFun.FunTurtle import FunTurtle
 import turtle
-from FunTurtle import FunTurtle
+
+import gvar
 
 
 def main():
-    window = turtle.Screen()
+    global turtleScreen
 
-    window.screensize(2000, 1000)
+
+    if gvar.turtleScreen == 0:
+        gvar.turtleScreen = turtle.Screen()
 
     michelangelo = FunTurtle()
 
@@ -16,13 +20,15 @@ def main():
     michelangelo.pendown()
 
 
-    michelangelo.speed("slowest")
+    michelangelo.speed("fast")
 
-    michelangelo.drawString("ABCDEFGHIJLOPR0")
+    print("Digite uma frase para a tartaruga escriba")
+    string = input()
 
-    michelangelo.drawCircle(4, 20)
+    michelangelo.drawString(string)
 
-    window.mainloop()
+    gvar.turtleScreen.clearscreen()
 
+    return
 
-main()
+#main()
