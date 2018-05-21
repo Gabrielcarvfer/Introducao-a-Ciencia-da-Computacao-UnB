@@ -21,14 +21,14 @@ def imprime_opcoes():
 
 
 def main():
-    opcao = SAIR
-    while True:
+    opcao = PONG
+    while opcao != SAIR:
         imprime_opcoes()
 
         opcao = int(input())
 
         if opcao == SAIR:
-            break
+            continue
         elif opcao == PONG:
             Pong.main()
         elif opcao == TAN:
