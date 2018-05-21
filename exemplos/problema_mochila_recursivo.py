@@ -1,4 +1,4 @@
-# Items cuja soma do volume é maior que o da mochila
+# Itens cuja soma do volume é maior que o da mochila
 #                        Volume e preço
 itens_para_selecionar = {0: (1, 10),
                          1: (10, 5),
