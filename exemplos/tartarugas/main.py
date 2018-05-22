@@ -1,4 +1,4 @@
-from turtleFun.FunTurtle import FunTurtle
+from exemplos.tartarugas.FunTurtle import FunTurtle
 import turtle
 
 import gvar

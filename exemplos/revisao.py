@@ -1,7 +1,7 @@
-import exemplos.pong_refactor as Pong
-import exemplos.tangente_recursivo as Tan
-import turtleFun.main as Tar_Esc
-import aula4.tartaruga_fractal as Tar_Frac
+import exemplos.joguinhos.pong_refactor as Pong
+import exemplos.matematicos.tangente_recursivo as Tan
+import exemplos.tartarugas.main as Tar_Esc
+import aulas.aula4.tartaruga_fractal as Tar_Frac
 
 
 SAIR = 0
