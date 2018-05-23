@@ -1,5 +1,6 @@
 frase = input()
 fraseTraduzida = ""
+
 consoantesMin = 'bcdfghjklmnpqrtsvwxyz'
 consoantesMax = 'BCDFGHJKLMNPQRSTVWXYZ'
 
