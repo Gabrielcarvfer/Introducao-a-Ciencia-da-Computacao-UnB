@@ -1,79 +1,72 @@
-sequencia1 = [-10, 20, 10, -30, 40]
-sequencia2 = [ 80, 20, 10, -70, 30]
+sequencia0 = [-10, 20, 10, -30, 40]
+sequencia1 = [ 80, 20, 10, -70, 30]
+sequencia2 = [1,2,3,9,4,5,6]
+sequencia3 = [9,5,6,3,9,6,4,7]
 
-#Valores subsequências para sequência 1
-#Subsequências de tamanho 1
-# [0] = -10
-# [1] =  20
-# [2] =  10
-# [3] = -30
-# [4] =  40
+class max_subseq_finder():
+    def __init__(self):
+        self.max_subseq = []
+        self.seq_original = []
+        self.seqs_exploradas = []
 
-#Subsequências de tamanho 2
-# [0,1] =  10
-# [1,2] =  30
-# [2,3] = -20
-# [3,4] =  10
+    def encontre_subsequencia_crescente_maxima(self, sequencia, index):
+        if sequencia in self.seqs_exploradas:
+            return
 
-#Subsequências de tamanho 3
-# [0,1,2] =  20
-# [1,2,3] =   0
-# [2,3,4] =  20
+        self.seqs_exploradas += [sequencia]
 
-#Subsequências de tamanho 4
-# [0,1,2,3] =  40
-# [1,2,3,4] =  40
+        if len(sequencia) > 1:
+            if sequencia[-1] >= sequencia[-2]:
+                if len(self.max_subseq) < len(sequencia):
+                    self.max_subseq = sequencia
+            else:
+                sequencia.pop(-1)
 
-#Subsequências de tamanho 5
-# [0,1,2,3,4] = 80
+        if index == len(self.seq_original)-1:
+            return
+        else:
+            for (indice, item) in enumerate(self.seq_original[index+1:]):
+                self.encontre_subsequencia_crescente_maxima(sequencia+[item],index+indice+1)
 
-#precalcula soma subsequencias da lista 1
-somaSeqList1 = [[] for i in range(len(sequencia1)+1)]
+        pass
 
-seqTemp = list(sequencia1)
-while len(seqTemp) > 0:
-    tempSoma = 0
-    tempSeq = []
+    def maxima_subsequencia(self, sequencia_original, seqs_exploradas=[]):
 
-    for elemento in seqTemp:
-        tempSeq.append(elemento)
-        tempSoma += elemento
-        somaSeqList1[len(tempSeq)].append((list(tempSeq), tempSoma))
+        self.max_subseq = []
+        self.seq_original = []
+        self.seqs_exploradas = seqs_exploradas
 
-    seqTemp.pop(0)
+        self.seq_original = sequencia_original
+        for (indice, item) in enumerate(self.seq_original):
+            self.encontre_subsequencia_crescente_maxima([item],indice)
+        return self.max_subseq, seqs_exploradas
 
-#precalcula soma subsequencias da lista 2
-somaSeqList2 = [[] for i in range(len(sequencia2)+1)]
+class max_common_subseq_finder():
+    def __init__(self):
+        self.seq_originais = []
+        self.seq_indexes = []
+        self.max_subseq = []
+        self.max_subseq_finder = max_subseq_finder()
 
-seqTemp = list(sequencia2)
-while len(seqTemp) > 0:
-    tempSoma = 0
-    tempSeq = []
+    def maxima_subsequencia_comum(self,sequencias):
+        self.seq_originais = sequencias
+        self.seq_indexes = []
+        self.max_subseq = []
+        self.seq_exploradas = [[]*len(sequencias)]
 
-    for elemento in seqTemp:
-        tempSeq.append(elemento)
-        tempSoma += elemento
-        somaSeqList2[len(tempSeq)].append((list(tempSeq), tempSoma))
+        maximas_subsequencias = [[]*len(sequencias)]
+        for i in range(len(sequencias)):
+            for (indice, item) in enumerate(self.seq_originais[i]):
+                subseq, seq_exploradas_parcial = self.max_subseq_finder.maxima_subsequencia([item],self.seq_exploradas[i])
+                self.seq_exploradas += seq_exploradas_parcial
+                maximas_subsequencias[i] += [subseq]
 
-    seqTemp.pop(0)
-
-#busca subsequencia na outra sequencia
+        pass
 
 
-def busca_subsequencia(seq1, seq2):
 
-    #Copia sequência 1
-    seq = list(seq1)
-
-    #Busca recursiva
-    for i in range(len(seq1)):
-        seq.pop(0)
-        busca_subsequencia(seq, seq2)
-
-    for j in range(len(seq2)):
-
-busca_subsequencia(sequencia1, sequencia2)
-
-pass
+common_seq_max_finder = max_common_subseq_finder()
+max_subseq0 = common_seq_max_finder.maxima_subsequencia_comum([sequencia0,sequencia1])
+print(max_subseq0)
 
 
