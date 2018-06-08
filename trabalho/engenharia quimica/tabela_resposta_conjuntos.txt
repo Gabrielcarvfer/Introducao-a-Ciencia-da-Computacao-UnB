@@ -1,0 +1,15 @@
+{'Fluoxetina': 1, 'Risperidona': 2, 'Victoza': 4, 'Polaramine': 2, 'Ciprofloxacina': 1, 'Ácido Lisérgico': 2, 'Colecalciferol': 3, 'Aspirina': 1, 'Tamiflu': 1, 'Cataflam': 1, 'Cianocobalamina': 2}
+{'Aspirina': 3, 'Colecalciferol': 2, 'Ritalina': 4, 'Cianocobalamina': 1, 'Triclosan': 1, 'Fenilefrina': 2, 'Amoxilina': 2, 'Victoza': 1, 'Polaramine': 1, 'Fluoxetina': 1, 'Tamiflu': 2}
+{'Cataflam': 1, 'Amoxilina': 3, 'Victoza': 4, 'Fenilefrina': 1, 'Ácido Lisérgico': 3, 'Tamiflu': 3, 'Ritalina': 2, 'Tylex': 1, 'Polaramine': 1, 'Ciprofloxacina': 1}
+{'Cataflam': 4, 'Ciprofloxacina': 2, 'Aspirina': 2, 'Ritalina': 1, 'Colecalciferol': 2, 'Polaramine': 1, 'Victoza': 1, 'Cianocobalamina': 2, 'Fluoxetina': 2, 'Ácido Lisérgico': 1, 'Tamiflu': 1, 'Amoxilina': 1}
+{'Fenilefrina': 2, 'Ritalina': 2, 'Triclosan': 1, 'Polaramine': 2, 'Tylex': 2, 'Risperidona': 2, 'Fluoxetina': 1, 'Ácido Lisérgico': 2, 'Ciprofloxacina': 1, 'Amoxilina': 2, 'Tamiflu': 2, 'Colecalciferol': 1}
+{'Victoza': 1, 'Fenilefrina': 5, 'Tamiflu': 2, 'Amoxilina': 1, 'Risperidona': 2, 'Ácido Lisérgico': 1, 'Polaramine': 1, 'Ritalina': 1, 'Colecalciferol': 3, 'Ciprofloxacina': 1, 'Cataflam': 1, 'Triclosan': 1}
+{'Ritalina': 2, 'Tylex': 3, 'Cianocobalamina': 1, 'Risperidona': 1, 'Victoza': 2, 'Fenilefrina': 2, 'Amoxilina': 2, 'Tamiflu': 1, 'Ciprofloxacina': 2, 'Polaramine': 1, 'Aspirina': 1, 'Colecalciferol': 1, 'Cataflam': 1}
+{'Fluoxetina': 1, 'Cianocobalamina': 2, 'Ácido Lisérgico': 1, 'Cataflam': 3, 'Tamiflu': 2, 'Tylex': 1, 'Risperidona': 1, 'Fenilefrina': 1, 'Polaramine': 1, 'Colecalciferol': 1, 'Ciprofloxacina': 2, 'Ritalina': 2, 'Aspirina': 1, 'Triclosan': 1}
+{'Fenilefrina': 1, 'Colecalciferol': 4, 'Tamiflu': 3, 'Aspirina': 3, 'Victoza': 2, 'Ácido Lisérgico': 2, 'Ritalina': 1, 'Polaramine': 1, 'Ciprofloxacina': 2, 'Fluoxetina': 1}
+{'Amoxilina': 1, 'Colecalciferol': 2, 'Triclosan': 1, 'Fluoxetina': 3, 'Ritalina': 6, 'Polaramine': 1, 'Tylex': 1, 'Risperidona': 1, 'Ácido Lisérgico': 1, 'Cianocobalamina': 2, 'Cataflam': 1}
+{'Aspirina': 3, 'Tylex': 3, 'Ácido Lisérgico': 2, 'Ritalina': 2, 'Tamiflu': 3, 'Cianocobalamina': 1, 'Risperidona': 2, 'Cataflam': 1, 'Fluoxetina': 1, 'Triclosan': 1, 'Victoza': 1}
+{'Amoxilina': 2, 'Victoza': 3, 'Cianocobalamina': 2, 'Ácido Lisérgico': 1, 'Triclosan': 2, 'Polaramine': 1, 'Aspirina': 4, 'Fenilefrina': 1, 'Colecalciferol': 1, 'Fluoxetina': 1, 'Tylex': 1, 'Cataflam': 1}
+{'Polaramine': 1, 'Tamiflu': 5, 'Fenilefrina': 3, 'Cianocobalamina': 2, 'Risperidona': 3, 'Ritalina': 2, 'Triclosan': 1, 'Cataflam': 1, 'Tylex': 1, 'Victoza': 1}
+{'Ritalina': 1, 'Fenilefrina': 1, 'Aspirina': 3, 'Cataflam': 2, 'Risperidona': 1, 'Colecalciferol': 1, 'Cianocobalamina': 2, 'Victoza': 2, 'Triclosan': 1, 'Tylex': 1, 'Tamiflu': 2, 'Amoxilina': 1, 'Polaramine': 2}
+{'Polaramine': 3, 'Ácido Lisérgico': 2, 'Ciprofloxacina': 2, 'Cianocobalamina': 1, 'Tamiflu': 1, 'Colecalciferol': 2, 'Cataflam': 1, 'Ritalina': 3, 'Fenilefrina': 1, 'Fluoxetina': 2, 'Tylex': 1, 'Amoxilina': 1}
