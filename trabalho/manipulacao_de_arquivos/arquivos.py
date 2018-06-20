@@ -1,5 +1,3 @@
-
-
 import csv
 
 arquivo = csv.DictReader(open("teste.csv","r",encoding="utf8"))
