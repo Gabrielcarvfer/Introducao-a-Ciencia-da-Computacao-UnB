@@ -49,18 +49,19 @@ def plota_gantt(tasks):
     #Imprime gráfico
     plt.show()
 
+#Se estiver executando esse arquivo, roda a função a seguir
+#Senão, pula
+if __name__ == "__main__":
+    def main():
+        # Dicionário endereçado (chaves) correspondentes ao número das tarefas
+        #  com valores sendo momento de inicio e duração da respectiva tarefa
+        tarefas = { 1 : [  0, 600],
+                    2 : [  0, 300],
+                    3 : [100, 100],
+                    4 : [200, 200],
+                    5 : [400, 400],
+                    }
+        plota_gantt(tarefas)
+        pass
 
-def um_teste_plota_gantt():
-    # Dicionário endereçado (chaves) correspondentes ao número das tarefas
-    #  com valores sendo momento de inicio e duração da respectiva tarefa
-    tarefas = { 1 : [  0, 600],
-                2 : [  0, 300],
-                3 : [100, 100],
-                4 : [200, 200],
-                5 : [400, 400],
-                }
-    plota_gantt(tarefas)
-
-
-um_teste_plota_gantt()
-pass
+    main()

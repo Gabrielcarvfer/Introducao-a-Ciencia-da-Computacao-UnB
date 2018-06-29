@@ -1,35 +1,10 @@
-import random
-INF = 99999999999999999999999999
-
-NAO = 0
-PRIMEIRA_VEZ = 1
-SIM = 2
-
-class Grafo():
-    def __init__(self, indice = 0):
-        self.indice = indice
-        self.dist = INF
-        self.vizinhos = []
-        self.visitado = NAO
-        self.caminho_da_raiz = []
-
-nos = [Grafo(x) for x in range(10)]
-
-def get_limites(size):
-    limite_inferior = random.randrange(0, size-1)
-    limite_superior = random.randrange(1, size)
-    return limite_inferior, limite_superior
-
-for j in range(len(nos)):
-    limite_inferior, limite_superior = get_limites(len(nos))
-    for i in range(limite_inferior, limite_superior):
-        nos[j].vizinhos.append(nos[i])
-        nos[i].vizinhos.append(nos[j])
+import exemplos.grafos.monta_grafo as mg
 
 
-def grafo_busca_largura(no_inicio, no_destino):
-    fila = [no_inicio]
+def grafo_busca_largura(grafo, no_inicio, no_destino):
+    fila = [grafo[no_inicio]]
     fila[0].dist = 0
+    print("Fila: ", [vizinho.indice for vizinho in fila])
 
     while len(fila) > 0:
         # Caso o nó explorado seja o destino, termine a busca
@@ -37,32 +12,36 @@ def grafo_busca_largura(no_inicio, no_destino):
             break;
 
         #Caso não seja o nó destino, continue a busca
-        num_vizinhos = len(fila[0].vizinhos)
         novo_caminho = list(fila[0].caminho_da_raiz)
         novo_caminho.append(fila[0].indice)
-        for k in range(num_vizinhos):
-            if fila[0].vizinhos[k].visitado == NAO:
-                fila[0].vizinhos[k].visitado = PRIMEIRA_VEZ
-                fila[0].vizinhos[k].dist = fila[0].dist + 1
-                fila[0].vizinhos[k].caminho_da_raiz = novo_caminho
-                fila.append(fila[0].vizinhos[k])
+        for k in fila[0].vizinhos.keys():
+            if grafo[k].visitado == mg.EstadoGrafo.NAO:
+                grafo[k].visitado = mg.EstadoGrafo.PRIMEIRA_VEZ
+                grafo[k].dist = fila[0].dist + 1
+                grafo[k].caminho_da_raiz = novo_caminho
+                fila.append(grafo[k])
 
 
-        fila[0].visitado = SIM
+        fila[0].visitado = mg.EstadoGrafo.SIM
         fila.pop(0)
-        print([vizinho.indice for vizinho in fila])
+        print("Fila: ", [vizinho.indice for vizinho in fila])
 
 
 def main():
-    ORIGEM = 0
-    DESTINO = 8
-    grafo_busca_largura(nos[ORIGEM], nos[DESTINO])
+    ORIGEM = 1
+    DESTINO = 5
+    nos = mg.um_teste_monta_grafo()
+    grafo_busca_largura(nos, ORIGEM, DESTINO)
 
-    if nos[DESTINO].dist != INF:
+    if nos[DESTINO].dist != mg.INF:
         print("O nó", nos[DESTINO].indice,"é alcançável partindo do nó", nos[ORIGEM].indice,
               "com distância", nos[DESTINO].dist, "passando pelos nós", nos[DESTINO].caminho_da_raiz)
     else:
         print("O nó", nos[DESTINO].indice, "não é alcançável partindo do nó", nos[ORIGEM].indice)
     pass
 
-main()
+
+#Se estiver executando esse arquivo, roda a função a seguir
+#Senão, pula
+if __name__ == "__main__":
+    main()
