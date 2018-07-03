@@ -45,6 +45,20 @@ def simplifica_recursivo(produtos_a_serem_somados):
 
 
     booleano_simplificado = ""
+    num_pares = len(produtos_a_serem_somados)
+    for par in range(num_pares):
+        produto = produtos_a_serem_somados[par]
+        num_elementos_soma = len(produto)
+        for elemento_produto in range(num_elementos_soma):
+            booleano_simplificado += produto[elemento_produto]
+
+            if elemento_produto < num_elementos_soma-1:
+                booleano_simplificado += "*"
+
+        if par < num_pares-1:
+            booleano_simplificado += " + "
+
+
     return booleano_simplificado
 
 
@@ -72,7 +86,9 @@ if __name__ == "__main__":
 
     def main():
         entrada = "A*NB+NA*A*A*B+A*A*B"
-        print(minimiza_logica_booleana(entrada))
+        print(entrada)
+        saida = minimiza_logica_booleana(entrada)
+        print(saida)
 
 
     main()
