@@ -1,8 +1,5 @@
-ICC20181
-==========
 
-
-Repositório com exemplos para os alunos da disciplina de ICC.
+Repositório com exemplos para os alunos da disciplina de Introdução à Ciência da Computação e Algoritmos e Programação de Computadores.
 
 Para instalar bibliotecas necessárias para alguns dos exemplos, se pode usar gerenciadores de bibliotecas/pacotes.
 O padrão do python se chama pip, e pode ser acessado pelo comando python -m pip.
