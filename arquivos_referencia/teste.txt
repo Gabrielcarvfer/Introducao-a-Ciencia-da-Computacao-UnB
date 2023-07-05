@@ -1,0 +1,2 @@
+nome, matricula, nota,
+gabriel, 210912398, 7,

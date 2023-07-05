@@ -1,0 +1,13 @@
+{
+  "campo1": 14,
+  "campo2": "string",
+  "campo3": {
+    "campo3_1": 15,
+    "campo3_2": "string2"
+  },
+  "campo4": [
+    "1",
+    "2",
+    "3"
+  ]
+}
