@@ -11,5 +11,5 @@ def fibonacci(x):
         fibs[x] = fibx
         return fibx
 
-
-print(fibonacci(3))
+for x in range(10):
+    print(fibonacci(x))
